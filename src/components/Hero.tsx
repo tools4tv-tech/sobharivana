@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from "../assets/images/Hero section Image.png";
 import mobileHeroImage from "../assets/images/hero section image for mobile view.png";
+import { HERO_VIDEO_PATH } from "../data/projectData";
 import { trackEvent } from "../utils/analytics";
 
 interface HeroProps {
@@ -15,14 +16,23 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section className="hero-section relative w-full h-svh min-h-[560px] sm:min-h-[640px] flex items-center justify-center overflow-hidden bg-[#071b3d]">
       <div className="hero-image-frame absolute inset-0 w-full h-full overflow-hidden">
-        <picture className="block w-full h-full">
-          <source media="(max-width: 639px)" srcSet={mobileHeroImage} />
+        <video
+          className="hero-media hero-video w-full h-full"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroImage}
+          aria-label="SOBHA Rivana residences in Sector 1, Greater Noida"
+        >
+          <source src={HERO_VIDEO_PATH} type="video/mp4" />
           <img
-            src={heroImage}
+            src={mobileHeroImage}
             alt="SOBHA Rivana residences in Sector 1, Greater Noida"
-            className="hero-media w-full h-full object-cover"
+            className="w-full h-full object-cover"
           />
-        </picture>
+        </video>
       </div>
 
       {/* CTA Buttons */}

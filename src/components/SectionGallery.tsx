@@ -3,7 +3,6 @@ import heroTowerImg from "../assets/images/sobha_rivana_hero_tower_1790589259918
 import swimmingPoolImg from "../assets/images/Swimming Pool.webp";
 import livingRoomImg from "../assets/images/sobha_rivana_luxury_living_1790589292241.jpg";
 import clubhouseImg from "../assets/images/sobha_rivana_clubhouse_1790589305992.jpg";
-import craftImg from "../assets/images/sobha_quality_craftsmanship_1790589322407.jpg";
 import bedroomImg from "../assets/images/sobha_bedroom_suite_1790589347849.jpg";
 import eveningTowerImg from "../assets/images/sobha_tower_evening_1790589381247.jpg";
 import { Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -69,14 +68,6 @@ export const SectionGallery: React.FC = () => {
       image: eveningTowerImg,
       aspect: "landscape",
       caption: "Skyline",
-    },
-    {
-      id: "g7",
-      title: "Craftsmanship",
-      category: "Architecture",
-      image: craftImg,
-      aspect: "landscape",
-      caption: "Craftsmanship",
     },
   ];
 

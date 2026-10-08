@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SobhaLogo } from "./SobhaLogo";
-import { CONTACT_EMAIL, RERA_REGISTRATION, LAUNCH_DATE, PHONE_NUMBER, WHATSAPP_NUMBER } from "../data/projectData";
+import { AGENT_RERA_REGISTRATION, RERA_REGISTRATION, LAUNCH_DATE, PHONE_NUMBER, WHATSAPP_NUMBER } from "../data/projectData";
 import { ShieldCheck, ArrowUp } from "lucide-react";
 
 export const Footer: React.FC = () => {
@@ -10,13 +10,13 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#060708] border-t border-[#1A1B1C] text-[#888888] pt-16 pb-28 md:pb-16 text-xs">
+    <footer className="site-footer bg-[#060708] border-t border-[#1A1B1C] text-[#C3C0BA] pt-16 pb-28 md:pb-16 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Top Tier: Logo & Navigation Mirror */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-10 border-b border-[#1A1A1D]">
           <SobhaLogo />
 
-          <nav className="flex flex-wrap gap-6 text-xs uppercase tracking-wider text-[#A0A0A0]">
+          <nav className="flex flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-wider text-[#C3C0BA]">
             <a href="#overview" className="hover:text-[#C9A875] transition-colors">Overview</a>
             <a href="#residences" className="hover:text-[#C9A875] transition-colors">Residences</a>
             <a href="#amenities" className="hover:text-[#C9A875] transition-colors">Amenities</a>
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
           <button
             onClick={scrollToTop}
             aria-label="Scroll back to top"
-            className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#A0A0A0] hover:text-[#C9A875] transition-colors cursor-pointer w-fit"
+            className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#C3C0BA] hover:text-[#C9A875] transition-colors cursor-pointer w-fit"
           >
             <span>Back to Top</span>
             <ArrowUp className="w-3.5 h-3.5" />
@@ -44,10 +44,14 @@ export const Footer: React.FC = () => {
               RERA Statutory Registration
             </span>
           </div>
-          <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs font-mono text-[#D8D4CA]">
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-xs font-mono text-[#E1DDD4]">
             <div>
               <span className="text-[#777777]">Project RERA No: </span>
               <span className="text-[#C9A875]">{RERA_REGISTRATION}</span>
+            </div>
+            <div>
+              <span className="text-[#777777]">Agent RERA No: </span>
+              <span className="text-[#C9A875]">{AGENT_RERA_REGISTRATION}</span>
             </div>
             <div>
               <span className="text-[#777777]">Official Launch Date: </span>
@@ -68,7 +72,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Mandatory Legal Disclaimers */}
-        <div className={`footer-disclaimers text-[11px] text-[#6E6E73] leading-relaxed max-w-5xl ${showDisclaimers ? "is-expanded" : ""}`}>
+        <div className={`footer-disclaimers text-[11px] text-[#AAA69E] leading-relaxed max-w-5xl ${showDisclaimers ? "is-expanded" : ""}`}>
           <p className="footer-disclaimer-preview">
             <strong>Disclaimer:</strong> All images, computer-generated visualisations, architectural representations, and interior perspectives are artist’s impressions and indicative concepts unless otherwise stated. They do not constitute an explicit contractual warranty or representation.
           </p>
@@ -95,12 +99,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Copyright & Footnote */}
-        <div className="pt-6 border-t border-[#161718] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#555555]">
+        <div className="footer-meta pt-6 border-t border-[#303133] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#AAA69E]">
           <div>
             © {new Date().getFullYear()} SOBHA Limited. All rights reserved.
           </div>
           <div>
-            Sector 1, Greater Noida (West), Uttar Pradesh · Call: {PHONE_NUMBER} · WhatsApp: {WHATSAPP_NUMBER.replace("+91", "+91 ")} · {CONTACT_EMAIL}
+            Sector 1, Greater Noida (West), Uttar Pradesh · Call: {PHONE_NUMBER} · WhatsApp: {WHATSAPP_NUMBER.replace("+91", "+91 ")}
           </div>
         </div>
       </div>

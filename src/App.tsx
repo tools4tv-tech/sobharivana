@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { ArrowUp } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { SectionFirstImpression } from "./components/SectionFirstImpression";
@@ -57,13 +56,10 @@ export function App() {
   }, []);
 
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
   useEffect(() => {
     const updateScrollState = () => {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0);
-      setShowBackToTop(window.scrollY > window.innerHeight * 0.7);
     };
     updateScrollState();
     window.addEventListener("scroll", updateScrollState, { passive: true });
@@ -186,16 +182,6 @@ export function App() {
         sourceContext={modalContext}
       />
 
-      {showBackToTop && (
-        <button
-          type="button"
-          aria-label="Back to top"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed right-4 bottom-[5.75rem] md:right-8 md:bottom-24 z-30 w-11 h-11 flex items-center justify-center border border-[#B8955A] bg-white/95 text-[#171717] shadow-lg transition-all hover:bg-[#B8955A] hover:-translate-y-1"
-        >
-          <ArrowUp className="w-4 h-4" />
-        </button>
-      )}
     </div>
   );
 }

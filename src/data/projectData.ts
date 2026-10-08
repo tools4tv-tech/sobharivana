@@ -4,9 +4,9 @@
 export const CURRENT_STARTING_PRICE = "₹2.74 Cr.*";
 export const PHONE_NUMBER = import.meta.env.VITE_PHONE_NUMBER || "+91 9800001645";
 export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "+918010009002";
-export const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL || "bhavya.tierravista@gmail.com";
 export const FORM_API_ENDPOINT = import.meta.env.VITE_FORM_API_ENDPOINT || "https://formsubmit.co/ajax/bhavya.tierravista@gmail.com";
 export const RERA_REGISTRATION = "UPRERAPRJ313638/03/2026";
+export const AGENT_RERA_REGISTRATION = "UPRERAAGT24612";
 export const LAUNCH_DATE = "25-03-2026";
 export const PRICE_LIST_EFFECTIVE = "24 March 2026";
 
